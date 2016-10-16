@@ -11,6 +11,9 @@ RUN dpkg -i chrome-remote-desktop_current_amd64.deb && rm chrome-remote-desktop_
 
 RUN echo 'root:root' |chpasswd
 
+RUN addgroup --gid 1000 monaka
+RUN adduser --uid 1000 --gid 1000 --shell /bin/bash monaka
+
 RUN sed -ri 's/^PermitRootLogin\s+.*/PermitRootLogin no/' /etc/ssh/sshd_config
 #RUN sed -ri 's/UsePAM yes/#UsePAM yes/g' /etc/ssh/sshd_config
 
