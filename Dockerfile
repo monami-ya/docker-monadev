@@ -1,11 +1,13 @@
 FROM monami0ya/docker-baseimage:monadev
 MAINTAINER Masaki Muranaka "https://github.com/monaka"
 
+RUN add-apt-repository -y ppa:openjdk-r/ppa
 RUN apt-get update
 
 RUN apt-get install -y openssh-server eclipse xvfb wget \
   xbase-clients python-psutil libpango1.0-0 libxss1 \
   zip unzip eclipse maven git tmux
+RUN apt-get install -y openjdk-8-jdk
 RUN wget https://dl.google.com/linux/direct/chrome-remote-desktop_current_amd64.deb
 RUN dpkg -i chrome-remote-desktop_current_amd64.deb && rm chrome-remote-desktop_current_amd64.deb
 
