@@ -23,4 +23,5 @@ RUN sed -ri 's/^PermitRootLogin\s+.*/PermitRootLogin no/' /etc/ssh/sshd_config
 
 EXPOSE 22 443
 
-RUN apt-get install -y vim tightvncserver awesome traceroute man
+RUN apt-get install -y vim x11vnc xvf awesome traceroute man \
+  xfonts-100dpi xfonts-75dpi xfonts-scalable xfonts-cyrilic
