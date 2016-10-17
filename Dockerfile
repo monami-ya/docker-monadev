@@ -8,6 +8,7 @@ RUN apt-get install -y openssh-server eclipse xvfb wget \
   xbase-clients python-psutil libpango1.0-0 libxss1 \
   zip unzip eclipse maven git tmux
 RUN apt-get install -y openjdk-8-jdk
+RUN apt-get install -y dnsutils
 RUN wget https://dl.google.com/linux/direct/chrome-remote-desktop_current_amd64.deb
 RUN dpkg -i chrome-remote-desktop_current_amd64.deb && rm chrome-remote-desktop_current_amd64.deb
 
@@ -22,3 +23,4 @@ RUN sed -ri 's/^PermitRootLogin\s+.*/PermitRootLogin no/' /etc/ssh/sshd_config
 
 EXPOSE 22 443
 
+RUN apt-get install -y vim 
