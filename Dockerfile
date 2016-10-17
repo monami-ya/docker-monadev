@@ -23,4 +23,4 @@ RUN sed -ri 's/^PermitRootLogin\s+.*/PermitRootLogin no/' /etc/ssh/sshd_config
 
 EXPOSE 22 443
 
-RUN apt-get install -y vim 
+RUN apt-get install -y vim tightvncserver awesome
