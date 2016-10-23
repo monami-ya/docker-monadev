@@ -33,3 +33,4 @@ RUN apt-get install -y vim x11vnc xvfb awesome traceroute man \
   xfonts-100dpi xfonts-75dpi xfonts-scalable xfonts-cyrillic sakura
 RUN ln -sf /var/host/media/removable/ /media/removable
 
+RUN apt-get install ttf-kochi-gothic xfonts-intl-japanese xfonts-intl-japanese-big
