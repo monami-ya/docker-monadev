@@ -18,7 +18,8 @@ RUN addgroup --gid 1000 monaka
 RUN adduser --uid 1000 --gid 1000 --shell /bin/bash monaka
 RUN echo 'monaka ALL=NOPASSWD: ALL' > /etc/sudoers.d/monaka
 
-RUN sed -ri 's/^PermitRootLogin\s+.*/PermitRootLogin no/' /etc/ssh/sshd_config
+RUN sed -ri 's/^#?PermitRootLogin\s+.*/PermitRootLogin no/' /etc/ssh/sshd_config
+RUN sed -ri 's/^#?PasswordAuthentication\s+.*/PasswordAuthentication no/' /etc/ssh/sshd_config
 #RUN sed -ri 's/UsePAM yes/#UsePAM yes/g' /etc/ssh/sshd_config
 
 EXPOSE 22
