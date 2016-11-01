@@ -37,3 +37,5 @@ RUN ln -sf /var/host/media/removable/ /media/removable
 RUN apt-get install -y ttf-kochi-gothic xfonts-intl-japanese xfonts-intl-japanese-big
 RUN apt-get install -y chromium-browser
 RUN apt-get install -y libyaml-dev
+RUN apt-get install -y build-essential zlib1g-dev
+RUN apt-get install -y language-pack-ja
