@@ -17,6 +17,8 @@ RUN echo 'root:root' |chpasswd
 RUN addgroup --gid 1000 monaka
 RUN adduser --uid 1000 --gid 1000 --shell /bin/bash monaka
 RUN echo 'monaka ALL=NOPASSWD: ALL' > /etc/sudoers.d/monaka
+RUN addgroup --gid 1001 cryptcoin-junkey
+RUN adduser --uid 1001 --gid 1001 --shell /bin/bash cryptcoin-junkey
 
 RUN sed -ri 's/^#?PermitRootLogin\s+.*/PermitRootLogin no/' /etc/ssh/sshd_config
 RUN sed -ri 's/^#?PasswordAuthentication\s+.*/PasswordAuthentication no/' /etc/ssh/sshd_config
