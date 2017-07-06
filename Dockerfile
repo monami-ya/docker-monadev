@@ -1,6 +1,8 @@
 FROM monami0ya/docker-baseimage:monadev
 MAINTAINER Masaki Muranaka "https://github.com/monaka"
 
+RUN echo dummy-1
+
 RUN add-apt-repository -y ppa:openjdk-r/ppa
 RUN apt-get update
 
@@ -13,7 +15,8 @@ RUN apt-get install -y libssl-dev \
   libmcrypt-dev libreadline-dev libxslt1-dev libxml2-dev libbz2-dev libcurl4-openssl-dev \
   libpng-dev libjpeg-dev libmcrypt-dev libsqlite-dev libtidy-dev libltdl-dev \
   make autoconf automake re2c lemon \
-  bash-completion
+  bash-completion \
+  gawk libsqlite3-dev sqlite3 libgmp-dev libgdbm-dev libncurses5-dev bison libffi-dev
 
 RUN wget https://dl.google.com/linux/direct/chrome-remote-desktop_current_amd64.deb
 RUN dpkg -i chrome-remote-desktop_current_amd64.deb && rm chrome-remote-desktop_current_amd64.deb
