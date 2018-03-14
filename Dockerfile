@@ -10,7 +10,7 @@ RUN apt-get update
 RUN apt-get install -y openssh-server eclipse xvfb wget \
   xbase-clients python-psutil libpango1.0-0 libxss1 \
   zip unzip eclipse maven git tmux vim
-RUN apt-get install -y openjdk-8-jdk
+RUN apt-get install -y openjdk-8-jdk openjfx
 RUN apt-get install -y dnsutils
 RUN apt-get install -y libssl-dev \
   libmcrypt-dev libreadline-dev libxslt1-dev libxml2-dev libbz2-dev libcurl4-openssl-dev \
